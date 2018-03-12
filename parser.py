@@ -8,9 +8,10 @@ print ('* Welcome to Tanita BC-601 to Garmin.csv*\n')
 print ('*****************************************\n')
 
 
-drive = input ('Please insert the drive letter of the Sdcard :\n')
-path = (drive + ':\\TANITA\\GRAPHV1\\DATA\\DATA1.CSV')
-
+print ('Please insert the drive letter of the Sdcard :\n')
+drive = raw_input(':')[0].lower()
+path = drive + ':\\TANITA\\GRAPHV1\\DATA\\DATA1.CSV'
+#fullpath = driver+path
 
 with open(path, 'rt')as inf:
     reader = csv.reader(inf, delimiter=",")
